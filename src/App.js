@@ -5,6 +5,8 @@ import Navbar from "./Navbar";
 import discthree from "./img/discthree.svg";
 import discfour from "./img/discfour.svg";
 import discfive from "./img/discfive.svg";
+import Trustable from "./Trustable";
+import Footer from "./Footer";
 function App() {
   const [data, setData] = useState([
     {
@@ -38,12 +40,14 @@ function App() {
       {data.map((doc, index) => (
         <ExplainSection
           key={index}
-          bgColor={index === 1 && "gray" }
+          bgColor={index === 1 && "gray"}
           image={doc.image}
           title={doc.title}
           description={doc.description}
         />
       ))}
+      <Trustable />
+        <Footer />
     </div>
   );
 }
