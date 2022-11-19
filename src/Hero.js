@@ -11,7 +11,7 @@ const Hero = () => {
         >
           Imagine um lugar...
         </p>
-        <p className="text-white text-lg mt-7  md:mt-10">
+        <p className="text-white text-md md:text-lg mt-7  md:mt-10">
           …onde você possa pertencer a um clube escolar, um grupo de gamers, ou
           uma comunidade artística mundial. Onde você e alguns amigos possam
           passar um tempo juntos. Um lugar que torna fácil conversar todos os
