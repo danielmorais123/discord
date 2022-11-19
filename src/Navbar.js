@@ -1,6 +1,7 @@
 import React from "react";
+import { motion } from "framer-motion";
 
-const Navbar = () => {
+const Navbar = ({ setOpen }) => {
   return (
     <div className="xl:p-4 py-4 flex xl:max-w-[1250px] w-[95%] mx-auto justify-between items-center">
       <div className="cursor-pointer">
@@ -59,6 +60,7 @@ const Navbar = () => {
           height="40"
           viewBox="0 0 40 40"
           className="cursor-pointer xl:hidden"
+          onClick={() => setOpen(true)}
         >
           <path
             fill="white"

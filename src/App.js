@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ExplainSection from "./ExplainSection";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
@@ -7,7 +7,22 @@ import discfour from "./img/discfour.svg";
 import discfive from "./img/discfive.svg";
 import Trustable from "./Trustable";
 import Footer from "./Footer";
+import Drawer from "./Drawer";
+
+function disableScrolling() {
+  var x = window.scrollX;
+  var y = window.scrollY;
+  window.onscroll = function () {
+    window.scrollTo(x, y);
+  };
+}
+
+function enableScrolling() {
+  window.onscroll = function () {};
+}
+
 function App() {
+  const [open, setOpen] = useState(false);
   const [data, setData] = useState([
     {
       image: discthree,
@@ -29,25 +44,38 @@ function App() {
     },
   ]);
 
-  return (
-    <div>
-      <div className=" min-h-[75vh] sm:min-h-[85vh] md:min-h-[75vh] bg-[#484cec] flex flex-col">
-        <Navbar />
-        <Hero />
+  useEffect(() => {
+    if (open) {
+      disableScrolling();
+      return;
+    }
+    else{
+      enableScrolling();
+    }
+  }, [open]);
 
-        {/**<h2 id="title" className="text-2xl text-white"> IMAGINE UM LUGAR</h2> */}
-      </div>{" "}
-      {data.map((doc, index) => (
-        <ExplainSection
-          key={index}
-          bgColor={index === 1 && "gray"}
-          image={doc.image}
-          title={doc.title}
-          description={doc.description}
-        />
-      ))}
-      <Trustable />
+  return (
+    <div className={`relative `}>
+      {" "}
+      {open ? <Drawer setOpen={setOpen} /> : null}
+      <div className={`${open && "opacity-70"}`}>
+        <div className={` min-h-[75vh] sm:min-h-[85vh] md:min-h-[75vh] bg-[#484cec] flex flex-col ${open && "pointer-events-none"}  `}>
+          <Navbar open={open} setOpen={setOpen} />
+          <Hero />
+        </div>
+        {/**<h2 id="title" className="text-2xl text-white"> IMAGINE UM LUGAR</h2> */}{" "}
+        {data.map((doc, index) => (
+          <ExplainSection
+            key={index}
+            bgColor={index === 1 ? "gray" : "white"}
+            image={doc.image}
+            title={doc.title}
+            description={doc.description}
+          />
+        ))}
+        <Trustable />
         <Footer />
+      </div>
     </div>
   );
 }

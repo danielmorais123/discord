@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 const ExplainSection = ({ image, title, description, bgColor }) => {
+
+
+  
   return (
     <motion.div
       initial={{ x: -200, opacity: 0 }}
@@ -8,9 +11,9 @@ const ExplainSection = ({ image, title, description, bgColor }) => {
       transition={{ duration: 2.5 }}
       viewport={{ once: true }}
       className={`min-h-[50vh] ${
-        bgColor && "bg-gray-100"
+        bgColor === "gray" ? "bg-gray-100" : "bg-white"
       } flex justify-evenly flex-col ${
-        bgColor ? "md:flex-row-reverse" : "md:flex-row"
+        bgColor === "gray" ? "md:flex-row-reverse" : "md:flex-row"
       }   items-center p-4`}
     >
       <img
