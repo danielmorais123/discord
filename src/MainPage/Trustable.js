@@ -1,6 +1,6 @@
 import React from "react";
-import discsix from "./img/discsix.svg";
-import discseven from "./img/discseven.svg";
+import discsix from "../img/discsix.svg";
+import discseven from "../img/discseven.svg";
 import { motion } from "framer-motion";
 
 const Trustable = () => {

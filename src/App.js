@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
-import ExplainSection from "./ExplainSection";
-import Hero from "./Hero";
-import Navbar from "./Navbar";
+import ExplainSection from "./MainPage/ExplainSection";
+import Hero from "./MainPage/Hero";
+import Navbar from "./MainPage/Navbar";
 import discthree from "./img/discthree.svg";
 import discfour from "./img/discfour.svg";
 import discfive from "./img/discfive.svg";
-import Trustable from "./Trustable";
-import Footer from "./Footer";
+import Trustable from "./MainPage/Trustable";
+import Footer from "./MainPage/Footer";
 import Drawer from "./Drawer";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainPage from "./MainPage/MainPage";
+import Server from "./ServerPage/Server";
 function disableScrolling() {
   var x = window.scrollX;
   var y = window.scrollY;
@@ -48,35 +50,31 @@ function App() {
     if (open) {
       disableScrolling();
       return;
-    }
-    else{
+    } else {
       enableScrolling();
     }
   }, [open]);
 
   return (
-    <div className={`relative `}>
-      {" "}
-      {open ? <Drawer setOpen={setOpen} /> : null}
-      <div className={`${open && "opacity-70"}`}>
-        <div className={` min-h-[75vh] sm:min-h-[85vh] md:min-h-[75vh] bg-[#484cec] flex flex-col ${open && "pointer-events-none"}  `}>
-          <Navbar open={open} setOpen={setOpen} />
-          <Hero />
-        </div>
-        {/**<h2 id="title" className="text-2xl text-white"> IMAGINE UM LUGAR</h2> */}{" "}
-        {data.map((doc, index) => (
-          <ExplainSection
-            key={index}
-            bgColor={index === 1 ? "gray" : "white"}
-            image={doc.image}
-            title={doc.title}
-            description={doc.description}
-          />
-        ))}
-        <Trustable />
-        <Footer />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <MainPage
+              open={open}
+              setOpen={setOpen}
+              data={data}
+              setData={setData}
+            />
+          }
+        ></Route>
+        <Route
+          path="/server"
+          element={<Server open={open} setOpen={setOpen} />}
+        ></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

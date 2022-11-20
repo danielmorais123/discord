@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Navbar = ({ setOpen }) => {
   return (
-    <div className="xl:p-4 py-4 flex xl:max-w-[1250px] w-[95%] mx-auto justify-between items-center">
+    <div className="xl:p-4 py-4 flex xl:max-w-[1250px] w-[95%] mx-auto justify-between items-center z-[9999] relative">
       <div className="cursor-pointer">
         <svg width="124" height="34" viewBox="0 0 124 34" class="logo-3oeRIY">
           <g fill="white">
@@ -59,7 +59,7 @@ const Navbar = ({ setOpen }) => {
           width="40"
           height="40"
           viewBox="0 0 40 40"
-          className="cursor-pointer xl:hidden"
+          className="cursor-pointer lg:hidden"
           onClick={() => setOpen(true)}
         >
           <path

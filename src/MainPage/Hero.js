@@ -1,6 +1,6 @@
 import React from "react";
-import discone from "./img/discone.svg";
-import disctwo from "./img/disctwo.svg";
+import discone from "../img/discone.svg";
+import disctwo from "../img/disctwo.svg";
 const Hero = () => {
   return (
     <div className=" flex flex-col flex-grow items-center justify-start xl:justify-center relative mt-8 overflow-x-hidden">
@@ -11,7 +11,7 @@ const Hero = () => {
         >
           Imagine um lugar...
         </p>
-        <p className="text-white text-md md:text-lg mt-7  md:mt-10">
+        <p className="text-white text-md mt-7  md:mt-10">
           …onde você possa pertencer a um clube escolar, um grupo de gamers, ou
           uma comunidade artística mundial. Onde você e alguns amigos possam
           passar um tempo juntos. Um lugar que torna fácil conversar todos os

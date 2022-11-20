@@ -7,7 +7,7 @@ const Drawer = ({ setOpen }) => {
       initial={{ x: 300 }}
       whileInView={{ x: 0 }}
       transition={{ duration: 0.5 }}
-      className="h-screen bg-[#fff] absolute right-0 z-[9999] w-[330px] p-5 rounded-l-xl flex flex-col justify-between"
+      className="h-screen bg-[#fff] absolute right-0 z-[9999] w-[330px] p-5 rounded-l-xl flex flex-col justify-between shadow-2xl"
     >
       <div>
         <div className=" flex items-center justify-between ">

@@ -1,5 +1,5 @@
 import React from "react";
-import brasilpng from "./img/brasil.png";
+import brasilpng from "../img/brasil.png";
 const Footer = () => {
   return (
     <div className="min-h-[40vh] bg-[#23272a] ">
