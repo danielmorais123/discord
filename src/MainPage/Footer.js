@@ -1,5 +1,5 @@
 import React from "react";
-import brasilpng from "../img/brasil.png";
+import usa from "../img/usa.png";
 const Footer = () => {
   return (
     <div className="min-h-[40vh] bg-[#23272a] ">
@@ -10,11 +10,11 @@ const Footer = () => {
               className="text-5xl  h-fit font-black tracking-wider sm:text-[55px] w-full  uppercase text-[#484cec] "
               id="title"
             >
-              Imagine um lugar
+              Imagine a place
             </p>
             <div className="flex space-x-3 text-white mt-2">
-              <img src={brasilpng} className="w-[24px] object-contain" />
-              <p className="text-sm">Português do Brasil</p>
+              <img src={usa} className="w-[24px] object-contain" />
+              <p className="text-sm">English, USA</p>
             </div>
             <div className="mt-4 text-white flex items-center space-x-6">
               <a className="cursor-pointer">
@@ -89,39 +89,39 @@ const Footer = () => {
           <div className="mt-6 flex w-full md:w-[50%] ">
             <div className="flex flex-col lg:flex-row  w-full ">
               <ul className="text-white text-sm tracking-wide w-full space-y-3 h-1/2">
-                <li className="text-[#484cec] cursor-pointer">Produto</li>
-                <li className="cursor-pointer">Baixar</li>
+                <li className="text-[#484cec] cursor-pointer">Product</li>
+                <li className="cursor-pointer">Download</li>
                 <li className="cursor-pointer">Nitro</li>
                 <li className="cursor-pointer">Status</li>
               </ul>
               <ul className="text-white text-sm lg:mt-0 tracking-wide mt-10 w-full space-y-3 h-1/2">
-                <li className="text-[#484cec] cursor-pointer">Empresa</li>
-                <li className="cursor-pointer">Sobre</li>
-                <li className="cursor-pointer">Empregos</li>
-                <li className="cursor-pointer">Marca</li>
-                <li className="cursor-pointer">Sala de impresa</li>
+                <li className="text-[#484cec] cursor-pointer">Company</li>
+                <li className="cursor-pointer">About</li>
+                <li className="cursor-pointer">Jobs</li>
+                <li className="cursor-pointer">Branding</li>
+                <li className="cursor-pointer">Newsroom</li>
               </ul>
             </div>
             <div className="flex flex-col lg:flex-row  w-full ">
               <ul className="text-white text-sm tracking-wide w-full space-y-3 h-1/2">
-                <li className="text-[#484cec] cursor-pointer">Recursos</li>
-                <li className="cursor-pointer">Faculdade</li>
-                <li className="cursor-pointer">Suporte</li>
-                <li className="cursor-pointer">Segurança</li>
+                <li className="text-[#484cec] cursor-pointer">Resources</li>
+                <li className="cursor-pointer">College</li>
+                <li className="cursor-pointer">Support</li>
+                <li className="cursor-pointer">Security</li>
                 <li className="cursor-pointer">Blog</li>
-                <li className="cursor-pointer">Comentários</li>
-                <li className="cursor-pointer">Desenvolvedores</li>
+                <li className="cursor-pointer">Feedback</li>
+                <li className="cursor-pointer">Developers</li>
                 <li className="cursor-pointer">StreamKit</li>
               </ul>
               <ul className="text-white text-sm tracking-wide mt-10 lg:mt-0 w-full space-y-3 h-1/2">
-                <li className="text-[#484cec] cursor-pointer">Política</li>
-                <li className="cursor-pointer">Termos</li>
-                <li className="cursor-pointer">Privacidade</li>
-                <li className="cursor-pointer">Configurações de cookies</li>
-                <li className="cursor-pointer">Diretrizes</li>
-                <li className="cursor-pointer">Reconhecimentos</li>
-                <li className="cursor-pointer">Licenças</li>
-                <li className="cursor-pointer">Moderação</li>
+                <li className="text-[#484cec] cursor-pointer">Policies</li>
+                <li className="cursor-pointer">Terms</li>
+                <li className="cursor-pointer">Privacy</li>
+                <li className="cursor-pointer">Cookie Settings</li>
+                <li className="cursor-pointer">Guidelines</li>
+                <li className="cursor-pointer">Acknowledgements</li>
+                <li className="cursor-pointer">Licenses</li>
+                <li className="cursor-pointer">Moderation</li>
               </ul>
             </div>
           </div>
@@ -149,7 +149,7 @@ const Footer = () => {
             </svg>
           </div>
           <button className="text-white hover:shadow-2xl bg-[#484cec] hover:bg-[#484cec]/80 shadow-lg py-3 px-5 rounded-full text-xs  transition-all font-semibold">
-            Register
+            Sign Up
           </button>
         </div>
       </div>

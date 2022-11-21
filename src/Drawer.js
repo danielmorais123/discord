@@ -1,7 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Drawer = ({ setOpen }) => {
+  const navigate = useNavigate();
+
   return (
     <motion.div
       initial={{ x: 300 }}
@@ -31,57 +34,55 @@ const Drawer = ({ setOpen }) => {
             </g>
           </svg>
           <div className="cursor-pointer">
-             <svg
-           
-            onClick={() => setOpen(false)}
-            width="24"
-            height="24"
-            viewBox="0 0 12 12"
-          >
-            <g fill="none" fill-rule="evenodd" aria-hidden="true">
-              <path d="M0 0h12v12H0"></path>
-              <path
-                fill="currentColor"
-                d="M9.5 3.205L8.795 2.5 6 5.295 3.205 2.5l-.705.705L5.295 6 2.5 8.795l.705.705L6 6.705 8.795 9.5l.705-.705L6.705 6"
-              ></path>
-            </g>
-          </svg>
+            <svg
+              onClick={() => setOpen(false)}
+              width="24"
+              height="24"
+              viewBox="0 0 12 12"
+            >
+              <g fill="none" fill-rule="evenodd" aria-hidden="true">
+                <path d="M0 0h12v12H0"></path>
+                <path
+                  fill="currentColor"
+                  d="M9.5 3.205L8.795 2.5 6 5.295 3.205 2.5l-.705.705L5.295 6 2.5 8.795l.705.705L6 6.705 8.795 9.5l.705-.705L6.705 6"
+                ></path>
+              </g>
+            </svg>
           </div>
-         
         </div>
         <hr className="mt-6 w-[85%]" />
         <div className="mt-5 w-[85%]">
           <ul>
             <li className="bg-[#f6f6f6] text-[#00b0f4] p-2 rounded-lg text-sm tracking-wide cursor-pointer hover:underline">
-              Início
+              Home
             </li>
             <li className=" p-2 rounded-lg text-sm tracking-wide cursor-pointer hover:underline text-[#23272a]">
-              Baixar
+              Download
             </li>
             <li className=" p-2 rounded-lg text-sm tracking-wide cursor-pointer hover:underline text-[#23272a]">
               Nitro
             </li>
-            <li className=" p-2 rounded-lg text-sm tracking-wide cursor-pointer hover:underline text-[#23272a]">
-              Descubra
+            <li
+              onClick={() => navigate("/servers")}
+              className=" p-2 rounded-lg text-sm tracking-wide cursor-pointer hover:underline text-[#23272a]"
+            >
+              Discover
             </li>
             <li className=" p-2 rounded-lg text-sm tracking-wide cursor-pointer hover:underline text-[#23272a]">
-              Baixar
+              Safety
             </li>
 
             <li className=" p-2 rounded-lg text-sm tracking-wide cursor-pointer hover:underline text-[#23272a]">
-              Segurança
+              Mod Academy
             </li>
             <li className=" p-2 rounded-lg text-sm tracking-wide cursor-pointer hover:underline text-[#23272a]">
-              Academia de Moradores
-            </li>
-            <li className=" p-2 rounded-lg text-sm tracking-wide cursor-pointer hover:underline text-[#23272a]">
-              Suporte
+              Support
             </li>
             <li className=" p-2 rounded-lg text-sm tracking-wide cursor-pointer hover:underline text-[#23272a]">
               Blog
             </li>
             <li className=" p-2 rounded-lg text-sm tracking-wide cursor-pointer hover:underline text-[#23272a]">
-              Carreiras
+              Careers
             </li>
           </ul>
         </div>
@@ -100,7 +101,7 @@ const Drawer = ({ setOpen }) => {
               <path d="M18 18.001V20.001H6V18.001H4V20.001C4 21.103 4.897 22.001 6 22.001H18C19.104 22.001 20 21.103 20 20.001V18.001H18Z"></path>
             </g>
           </svg>
-          Baixar para Windows
+          Download for Windows
         </button>
       </div>
     </motion.div>

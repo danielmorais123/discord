@@ -17,20 +17,19 @@ const Trustable = () => {
           id="title"
           className="   font-black tracking-wider text-[50px] w-full  uppercase"
         >
-          TECNOLOGIA DE CONEXÃO CONFIÁVEL
+          RELIABLE TECH FOR STAYING CLOSE
         </p>
         <p>
-          Voz e vídeo de baixa latência, para você conversar como se estivesse
-          na mesma sala. Dê um joinha por vídeo, veja amigos transmitirem a
-          jogatina do dia ou junte uma galera pra desenhar na tela
-          compartilhada.
+          Low-latency voice and video feels like you’re in the same room. Wave
+          hello over video, watch friends stream their games, or gather up and
+          have a drawing session with screen share.
         </p>
       </div>
       <img src={discsix} className="w-[70%]" />
       <div className="flex flex-col items-center mb-5">
         <img src={discseven} />
         <p className="text-[26px] font-bold text-center tracking-wider">
-          Vamos começar a sua jornada?
+        Ready to start your journey?
         </p>
         <button className=" flex items-center justify-center bg-[#484cec] mt-3 w-fit px-5 py-3 rounded-full hover:bg-[#484cec]/75 tracking-wide text-white transition-all hover:shadow-2xl">
           <svg
@@ -45,7 +44,7 @@ const Trustable = () => {
               <path d="M18 18.001V20.001H6V18.001H4V20.001C4 21.103 4.897 22.001 6 22.001H18C19.104 22.001 20 21.103 20 20.001V18.001H18Z"></path>
             </g>
           </svg>
-          Baixar para Windows
+          Download for Windows
         </button>
       </div>
     </motion.div>

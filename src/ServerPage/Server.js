@@ -4,7 +4,10 @@ import imageserverleft from "../img/imageserverleft.svg";
 import imageserverright from "../img/imageserverright.svg";
 import Drawer from "../Drawer";
 import Card from "./Card";
+import Footer from "../MainPage/Footer";
 
+import ExplainSection from "../MainPage/ExplainSection";
+import discthree from "../img/discthree.svg";
 const Server = ({ setOpen, open }) => {
   const [cards, setCards] = useState([
     {
@@ -243,7 +246,7 @@ const Server = ({ setOpen, open }) => {
               </svg>
             </button>
           </div>
-          <div className="mt-8 flex mb-3">
+          <div className="my-8 flex ">
             <ul className="hidden lg:flex flex-col min-w-[260px] space-y-2">
               <li className="cursor-pointer text-sm bg-gray-200 p-3 rounded-md font-bold tracking-wider flex ">
                 <svg
@@ -347,6 +350,14 @@ const Server = ({ setOpen, open }) => {
             </div>
           </div>
         </div>
+        <ExplainSection
+          centered
+          bgColor="gray"
+          image={discthree}
+          title="Find a place where you belong"
+          description="Discord servers are organized into topic-based channels where you can collaborate, share, and just talk about your day without clogging up a group chat."
+        />
+        <Footer />
       </div>
     </div>
   );

@@ -1,13 +1,9 @@
 import { useEffect, useState } from "react";
-import ExplainSection from "./MainPage/ExplainSection";
-import Hero from "./MainPage/Hero";
-import Navbar from "./MainPage/Navbar";
+
 import discthree from "./img/discthree.svg";
 import discfour from "./img/discfour.svg";
 import discfive from "./img/discfive.svg";
-import Trustable from "./MainPage/Trustable";
-import Footer from "./MainPage/Footer";
-import Drawer from "./Drawer";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./MainPage/MainPage";
 import Server from "./ServerPage/Server";
@@ -28,21 +24,21 @@ function App() {
   const [data, setData] = useState([
     {
       image: discthree,
-      title: "Crie um espaço controlado por convite onde você se sinta em casa",
+      title: "Create an invite-only place where you belong",
       description:
-        "Os servidores Discord são organizados em canais com assuntos paravocês colaborarem, compartilharem ou simplesmente falarem do dia sem entupir um chat geral.",
+        "Discord servers are organized into topic-based channels where you can collaborate, share, and just talk about your day without clogging up a group chat.",
     },
     {
       image: discfour,
-      title: "Aqui é fácil se encontrar",
+      title: "Where hanging out is easy",
       description:
-        "Entre no canal de voz quando estiver à toa. Amigos no mesmo servidor podem te ver e entrar imediatamente, sem nem ter que fazer a chamada.",
+        "Grab a seat in a voice channel when you are free. Friends in your server can see you are around and instantly pop in to talk without having to call.",
     },
     {
       image: discfive,
-      title: "Para poucos e para muitos",
+      title: "From few to a fandom",
       description:
-        "Organize qualquer comunidade com ferramentas de moderação e acesso personalizado a membros. Dê poderes especiais aos membros, monte canais privados e muito mais.",
+        "Get any community running with moderation tools and custom member access. Give members special powers, set up private channels, and more.",
     },
   ]);
 
@@ -70,7 +66,7 @@ function App() {
           }
         ></Route>
         <Route
-          path="/server"
+          path="/servers"
           element={<Server open={open} setOpen={setOpen} />}
         ></Route>
       </Routes>
